@@ -5,6 +5,7 @@ import SocialLogin from './SocialLogin';
 const Login = () => {
     return (
         <div className='container w-25'>
+        <h2 className='py-3'>Login</h2>
             <form>
                 <div className="form-outline mb-4">
                     <input type="email" id="form2Example1" className="form-control" placeholder='Your Email' />
@@ -23,14 +24,14 @@ const Login = () => {
                     </div>
 
                     <div className="col">
-                        <button className='btn btn-link text-decoration-none'>Forgot password?</button>
+                        <button className='btn btn-link text-decoration-none text-success'>Forgot password?</button>
                     </div>
                 </div>
 
                 <button type="button" className="btn btn-success btn-block mb-4">Login</button>
 
                 <div className="text-center">
-                    <p>Not a member? <a href="#!">Register</a></p>
+                    <p>Not a member? <Link to='/register' className='text-success text-decoration-none'>Register</Link></p>
                 </div>
             </form>
             <SocialLogin></SocialLogin>
