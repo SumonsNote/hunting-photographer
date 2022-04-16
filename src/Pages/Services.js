@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ServicesSection = () => {
+const Services = () => {
     return (
         <div>
             <h2>Services Section</h2>
@@ -8,4 +8,4 @@ const ServicesSection = () => {
     );
 };
 
-export default ServicesSection;
+export default Services;
