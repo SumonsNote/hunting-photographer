@@ -3,12 +3,20 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from './../Firebase/Firebase.init';
+import Loading from './Loading';
 
 const Navbar = () => {
     const [user, loading, error] = useAuthState(auth);
 
     const handleSignOut = () => {
         signOut(auth)
+    }
+
+    if(loading) {
+        return <Loading></Loading>
+    }
+    if(error) {
+        <p className='text-danger'>Error: {error}</p>
     }
     return (
         <nav className="navbar navbar-expand-lg navbar-light container">
