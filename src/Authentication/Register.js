@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import SocialLogin from './SocialLogin';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from './../Firebase/Firebase.init';
+import Loading from '../ShareFiles/Loading';
 
 const Register = () => {
     const [agree, setAgree] = useState(false)
@@ -27,11 +28,7 @@ const Register = () => {
         navigate('/home')
     }
     if (loading) {
-        return (
-            <div>
-                <p>Loading...</p>
-            </div>
-        );
+        return <Loading></Loading>
     }
     if (error) {
         return (

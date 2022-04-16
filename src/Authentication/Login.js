@@ -3,11 +3,12 @@ import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from './SocialLogin';
 import auth from './../Firebase/Firebase.init';
+import Loading from '../ShareFiles/Loading';
 
 const Login = () => {
     const navigate = useNavigate()
     const location = useLocation()
-    
+
     let from = location.state?.from?.pathname || "/";
     const [
         signInWithEmailAndPassword,
@@ -33,7 +34,7 @@ const Login = () => {
       }
   
       if (loading) {
-          return <p>Loading...</p>
+          return <Loading></Loading>
       }
   
       if (user) {
