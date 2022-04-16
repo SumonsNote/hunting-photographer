@@ -12,7 +12,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
                         <Link className="nav-link active" aria-current="page" to='/home'>Home</Link>
-                        <Link className="nav-link ms-3" to='/services'>Services</Link>
+                    <Link className="nav-link ms-3" to='/services'>Services</Link>
                         <Link className="nav-link ms-3" to='/blogs'>Blogs</Link>
                         <Link className="nav-link ms-3" to='/about'>About</Link>
                         <Link className="nav-link ms-3" to='/login'>Login</Link>

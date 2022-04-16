@@ -2,21 +2,21 @@
     {
         "id": "1",
         "name": "Landscape Photography",
-        "img": "../src/Images/service-1.jpg",
+        "img": "https://i.ibb.co/1Gj2rD1/service-1.jpg",
         "price": "$5000",
         "description": "Landscape photography shows the spaces within the world, sometimes vast and unending, but other times microscopic. Landscape photographs typically capture the presence of nature but can also focus on man-made features or disturbances of landscapes. Landscape photography is done for a variety of reasons."
     },
     {
         "id": "2",
         "name": "People Photography",
-        "img": "../src/Images/service-2.jpg",
+        "img": "https://i.ibb.co/b1FQJH8/service-2.jpg",
         "price": "$3000",
         "description": "Portrait photography, or portraiture, is a type of photography aimed toward capturing the personality of a person or group of people by using effective lighting, backdrops, and poses. A portrait photograph may be artistic or clinical"
     },
     {
         "id": "3",
         "name": "Wildlife Photography",
-        "img": "../src/Images/service-3.jpg",
+        "img": "https://i.ibb.co/LzhvP2H/service-3.jpg",
         "price": "$7000",
         "description": "Wildlife photography is a genre of photography concerned with documenting various forms of wildlife in their natural habitat. As well as requiring photography skills, wildlife photographers may need field craft skills"
     }

@@ -6,6 +6,8 @@ import About from './Pages/About';
 import Navbar from './ShareFiles/Navbar';
 import Login from './Authentication/Login';
 import Services from './Pages/Services';
+import Checkout from './Pages/Checkout';
+import RequiredAuth from './Pages/RequiredAuth';
 
 function App() {
   return (
@@ -18,6 +20,9 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/checkout' element={
+          <RequiredAuth><Checkout></Checkout></RequiredAuth>
+        }></Route>
       </Routes>
     </div>
   );
