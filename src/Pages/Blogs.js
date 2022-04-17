@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div className='container'>
+        <div className='container py-5 mb-4'>
         <h2 className='text-uppercase fs-3 py-4'>Questions and answers</h2>
         <div className='border-bottom border-2 bg bg-success w-25 container my-5'></div>
             <div className="accordion" id="accordionExample">
