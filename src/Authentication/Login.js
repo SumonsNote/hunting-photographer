@@ -1,11 +1,12 @@
-import React from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import React, { useRef } from 'react';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from './SocialLogin';
 import auth from './../Firebase/Firebase.init';
 import Loading from '../ShareFiles/Loading';
 
 const Login = () => {
+    const emailRef = useRef([])
     const navigate = useNavigate()
     const location = useLocation()
 
@@ -16,6 +17,9 @@ const Login = () => {
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
+      const [sendPasswordResetEmail, sending, resetError] = useSendPasswordResetEmail(
+        auth
+      );
 
       const handleSignIn = (e) => {
         e.preventDefault()
@@ -23,9 +27,18 @@ const Login = () => {
        const pass = e.target.password.value;
        signInWithEmailAndPassword(email, pass)
       }
+
+      const resetPassword = async () => {       
+            const email = emailRef.current.value;
+            if(email){
+                await sendPasswordResetEmail(email)
+                console.log('sent mail');
+            }
+      }
+
       let errorElement;
 
-      if (error) {
+      if (error || resetError) {
           errorElement =
               <div>
                   <p className='text-danger'>Error: {error?.message}</p>
@@ -33,7 +46,7 @@ const Login = () => {
   
       }
   
-      if (loading) {
+      if (loading || sending) {
           return <Loading></Loading>
       }
   
@@ -45,7 +58,7 @@ const Login = () => {
         <h2 className='py-3'>Login</h2>
             <form onSubmit={handleSignIn}>
                 <div className="form-outline mb-4">
-                    <input type="email" name='email' id="form2Example1" className="form-control" placeholder='Your Email' />
+                    <input type="email" name='email' id="form2Example1" className="form-control" ref={emailRef} placeholder='Your Email' />
                 </div>
 
                 <div className="form-outline mb-4">
@@ -61,7 +74,7 @@ const Login = () => {
                     </div>
 
                     <div className="col">
-                        <button className='btn btn-link text-decoration-none text-success'>Forgot password?</button>
+                        <button onClick={resetPassword} className='btn btn-link text-decoration-none text-success'>Forgot password?</button>
                     </div>
                 </div>
                 {errorElement}
