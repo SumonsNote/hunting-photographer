@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogin from './SocialLogin';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from './../Firebase/Firebase.init';
@@ -9,6 +9,9 @@ const Register = () => {
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const [agree, setAgree] = useState(false)
     const navigate = useNavigate()
+    const location = useLocation()
+
+    let from = location.state?.from?.pathname || "/";
     const [
         createUserWithEmailAndPassword,
         user,
@@ -26,7 +29,7 @@ const Register = () => {
     }
 
     if (user) {
-        navigate('/home')
+        navigate(from, { replace: true });
     }
     if (loading || updating) {
         return <Loading></Loading>
