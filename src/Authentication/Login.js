@@ -48,7 +48,6 @@ const Login = () => {
               <div>
                   <p className='text-danger'>Error: {error?.message}</p>
               </div>
-  
       }
   
       if (loading || sending) {
@@ -63,11 +62,11 @@ const Login = () => {
         <h2 className='py-3'>Login</h2>
             <form onSubmit={handleSignIn}>
                 <div className="form-outline mb-4">
-                    <input type="email" name='email' id="form2Example1" className="form-control" ref={emailRef} placeholder='Your Email' />
+                    <input type="email" name='email' id="form2Example1" className="form-control" ref={emailRef} placeholder='Your Email' required/>
                 </div>
 
                 <div className="form-outline mb-4">
-                    <input type="password" name='password' id="form2Example2" className="form-control" placeholder='Your Password' />
+                    <input type="password" name='password' id="form2Example2" className="form-control" placeholder='Your Password' required/>
                 </div>
 
                 <div className="row mb-4 d-flex align-items-center">
