@@ -1,10 +1,10 @@
 import React from 'react';
+import Banner from './Banner';
 
 const Home = () => {
     return (
-        <div className='home-page'>
-            {/* <button>Explore Photographers</button>
-            <button>Explore Photographs</button> */}
+        <div>
+            <Banner></Banner>
         </div>
     );
 };

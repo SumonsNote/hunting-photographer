@@ -10,7 +10,7 @@ const Service = ({service}) => {
             <img src={img} alt=""/>
             <p className='py-4'>Price: {price}</p>
             <p>{description}</p>
-            <Link to='/checkout' className='bg bg-success text-light p-2 border-0 rounded-2 text-decoration-none'>Checkout</Link>
+            <Link to='/checkout' className='bg bg-success text-light p-2 border-0 rounded-2 text-decoration-none'>Hire Me</Link>
         </div>
     );
 };
