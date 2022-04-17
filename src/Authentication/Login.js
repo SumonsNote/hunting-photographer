@@ -57,10 +57,10 @@ const Login = () => {
       if (user) {
           navigate(from, { replace: true });
       }
+
     return (
-        <form className='container w-25 py-3'>
+        <form onSubmit={handleSignIn} className='container w-25 py-3'>
         <h2 className='py-3'>Login</h2>
-            <div onSubmit={handleSignIn}>
                 <div className="form-outline mb-4">
                     <input type="email" name='email' id="form2Example1" className="form-control" ref={emailRef} placeholder='Your Email' required/>
                 </div>
@@ -89,7 +89,6 @@ const Login = () => {
                     <p>Not a member? <Link to='/register' className='text-success text-decoration-none'>Register</Link></p>
                 </div>
                 
-            </div>
             <SocialLogin></SocialLogin>
         </form>
     );

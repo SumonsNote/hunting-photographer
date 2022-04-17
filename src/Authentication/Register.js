@@ -23,7 +23,6 @@ const Register = () => {
         const password = event.target.password.value;
         await createUserWithEmailAndPassword(email, password)
         await updateProfile({displayName: name})
-        // console.log(name, email, password);
     }
 
     if (user) {

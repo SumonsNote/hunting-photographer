@@ -24,7 +24,7 @@ const Navbar = () => {
     return (
             <nav className="navbar navbar-expand-lg navbar-light container sticky-top">
             <div className="container-fluid">
-                <CustomLink className="navbar-brand text fs-3 text-uppercase " to='/'>Hunting Photographer</CustomLink>
+                <Link className="navbar-brand text fs-3 text-uppercase " to='/'>Hunting Photographer</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
