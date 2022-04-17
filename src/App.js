@@ -10,6 +10,7 @@ import Checkout from './Pages/Checkout';
 import RequiredAuth from './Pages/RequiredAuth';
 import Register from './Authentication/Register';
 import Page404 from './NotFoundPage/Page404';
+import Footer from './ShareFiles/Footer';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         }></Route>
         <Route path='*' element={<Page404></Page404>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

@@ -21,7 +21,8 @@ const Navbar = () => {
         <p className='text-danger'>Error: {error}</p>
     }
     return (
-        <nav className="navbar navbar-expand-lg navbar-light container">
+        <section>
+            <nav className="navbar navbar-expand-lg navbar-light container">
             <div className="container-fluid">
                 <Link className="navbar-brand text fs-3 text-uppercase " to='/'>Hunting Photographer</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,6 +42,7 @@ const Navbar = () => {
                 </div>
             </div>
         </nav>
+        </section>
     );
 };
 
