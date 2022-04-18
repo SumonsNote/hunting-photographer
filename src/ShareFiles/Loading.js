@@ -2,10 +2,8 @@ import React from 'react';
 
 const Loading = () => {
     return (
-        <div>
-            <div className="spinner-border" role="status">
-                <span className="visually-hidden">Loading...</span>
-            </div>
+        <div class="spinner-grow spinner-grow-sm" role="status">
+            <span class="visually-hidden">Loading...</span>
         </div>
     );
 };

@@ -7,8 +7,8 @@ const Banner = () => {
         <div className='banner'>
             <img src={banner} alt="" />
             <div className='banner-button'>
-                <button>Explore Photographers</button>
-                <button>Explore Photographs</button>
+                <a href="https://willbl.com" target='_blank'><button>Explore Photographers</button>
+                </a><a href="https://willbl.com/projects" target='_blank'><button>Explore Photographs</button></a>
             </div>
         </div>
     );
