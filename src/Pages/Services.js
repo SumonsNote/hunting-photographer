@@ -10,7 +10,7 @@ const Services = () => {
             .then(data => setServices(data))
     }, [])
     return (
-        <div>
+        <div className='py-5'>
         <h2 className='text-uppercase'>Services</h2>
             <div className='d-flex container'>
                 {
